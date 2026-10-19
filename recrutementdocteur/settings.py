@@ -76,11 +76,13 @@ def get_env_list(name: str, default: str = "") -> list[str]:
         if value.strip()
     ]
 
-
 ALLOWED_HOSTS = get_env_list(
     "ALLOWED_HOSTS",
-    "recrutementdocteurbackend-production.up.railway.app",
-    "localhost,127.0.0.1",
+    (
+        "recrutementdocteurbackend-production.up.railway.app,"
+        "localhost,"
+        "127.0.0.1"
+    ),
 )
 
 
